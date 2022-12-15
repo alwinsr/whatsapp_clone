@@ -5,7 +5,7 @@
 } 
 
 .chat__header {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     border-bottom: 1 px solid lightgrey;
@@ -27,7 +27,7 @@
 
 .chat__body{
     flex: 1;
-    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALAAWAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAABAAIH/8QAJxAAAgIBAwUBAAIDAQAAAAAAAAERITECQVESYXGBkaHR8SKx4TL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOo9QZF7bg+xNQL3I9cRluC2tEkBpMynyXTOBjkCSoUjMPqz+DYE3D38F1P0Zzq/hDquK3AU4uWRVSZAHTdjjEoNSbltzwCeWwNMcMFqRZ3AAbduPRqgbjS9gLqnb6O2wTfccgX4WqlRBnsAaczsRpLYgMvyLU6dIpQGOWBQGrYU+wvSnDhgEWy6bk0ksAkopAERn/ZbinWK4KJbj9AIseqoKnV/ChcgHSqRCobqUIGWnyUck3eBctWARXbaAeli0KXcCvgz4/DSjcm1OFIB1LA9X9luUdgDU3Iav8YcS/Iw1eJ4J0rbyBXCIlqlxsQE9S0uN+STlvtkm68hheQN5UgZTdvgXqiJhsBgHpXSy6vANvEZAkkt2x2x+BvRpACF4/gJsWqAFPaZIZw+l+CAEWYjYXq8hM8+AHpDVpZd4+F1RTTkCU8Cp3JaoyCcZAY4zuVySwKXsAcoF4Ytw92XU5pAXpkS1bkBNeGD7MlpsV2ANnWShcfgxPL9FgAicFHgnRS4mPQEk5yN8f8AQWrt9Ha4+gGdQariEaoH2/0BVCUkGlQ7IB1J3qTnsC3f4L8k1WkBTnf4ymXUBGQ1bAa3BtQ08lFuMoIkBkV9YRFuIY4dAXwnagIuRmoAoXEEHT5+kApRuCrkmns/pPu/wBT7E0tUOwinfgGnywNpJgoigsF2ddmBpNQUTsCaVGk/oA1NWUIH/wCoDV/j3YGkr4IE3HsgKZeByrB6ktULJJy2lIE0KVj9gHTAlEWilTiyiWD0p6X4yArIvHJhL2O0QgKHNv8AScQpe+w3RPGQBNtpVBEqICbpqp5B0vI+xylCwBlN544GYzDkY3M69LnAD1f0DzCxk0pmYBTABuPkYeyVZJqwCVODTxbrgH7C+AJPFfpD6ID/2Q==");
+    background-image: url("D:\web development\1\whatsapp_clone\whatsapp_frontend\src\images\images (1).jpg");
     background-repeat: repeat;
     background-position: center;
     padding: 30px;

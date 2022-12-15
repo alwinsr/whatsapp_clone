@@ -2,6 +2,7 @@ import React from 'react'
 import './Sidebar.css'
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import {Avatar, IconButton } from '@mui/material';
+import avatar from "./images/avatar.png";
 import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -12,7 +13,7 @@ function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebar__header">
-          <Avatar src=''></Avatar>
+          <Avatar alt="Johnny Bravo" src={avatar}></Avatar>
             <div className="sidebar__headerRight">
                 <IconButton>
                 <DonutLargeIcon />
