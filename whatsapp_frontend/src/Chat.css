@@ -78,6 +78,7 @@
 }
 
 .chat__footer > form > input {
+    outline-width: 0;
     flex: 1;
     border-radius: 10px;
     border: none;
