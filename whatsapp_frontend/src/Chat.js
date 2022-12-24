@@ -1,14 +1,25 @@
 import { AttachFile, MoreVert, SearchOutlined } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import {  useParams } from "react-router-dom";
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import MicIcon from '@mui/icons-material/Mic';
 import './Chat.css' 
 import axios from "./axios";
+import db from './firebase';
 
 function Chat({ messages }) {
   
   const [input, setInput] = useState("");
+  const { roomId } = useParams();
+  const [roomName, setRoomName] = useState("");
+
+  useEffect(() => {
+    if(roomId){
+      db.collection('rooms').doc(roomId).onSnapshot((snapshot) =>
+      setRoomName(snapshot.data().name))
+    }
+  },[roomId]);
 
   const sendMessage = async (e) =>{
     e.preventDefault();  //stops refresh
@@ -27,7 +38,7 @@ function Chat({ messages }) {
       <div className="chat__header">
         <Avatar></Avatar>
         <div className="chat__headerInfo">
-          <h3>Room Name</h3>
+          <h3>{roomName}</h3>
           <p>Last seen at ...</p>
         </div>
         <div className="chat__headerRight">
@@ -73,4 +84,4 @@ function Chat({ messages }) {
   )
 }
 
-export default Chat
+export default Chat;

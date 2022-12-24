@@ -1,0 +1,30 @@
+
+
+p{
+    margin-left: 10px;    
+}
+
+.login{
+    place-items: center;
+}
+
+.login_container{
+    text-align: center;
+    padding:  100px;
+    border-radius: 10px;
+    box-shadow: 0  2px 4px rgb(67, 66, 66);
+
+}
+
+.login_container > img{
+    object-fit: contain;
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+.login_container > button{
+    margin-top: 50px;
+    color: white;
+    background-color: purple;
+
+}
