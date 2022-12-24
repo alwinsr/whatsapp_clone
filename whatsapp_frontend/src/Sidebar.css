@@ -1,18 +1,26 @@
 input{
     width: 162px;
 }
+
+
+
 .sidebar {
     display: flex;
     flex-direction: column;
     flex: 0.35;
 }
 
+.avatarName{
+    display: flex;
+    
+}
+
 .sidebar__header {
     display: flex;
-    justify-content: space-between;
     padding: 10px;
     border-right: 1px solid lightgray;
-    min-width: 10vw;
+    min-width: 10vw;  
+    justify-content: space-between; 
 }
 
 .sidebar__headerRight > .MuiSvgIcon-root {

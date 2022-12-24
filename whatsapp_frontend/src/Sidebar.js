@@ -31,8 +31,11 @@ function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebar__header">
-          <Avatar alt="Johnny Bravo" src={avatar}></Avatar>
+          <div className='avatarName'>
+            <Avatar alt="Johnny Bravo" src={avatar}></Avatar>
+          </div>
             <div className="sidebar__headerRight">
+              
                 <IconButton>
                 <DonutLargeIcon />
                 </IconButton>

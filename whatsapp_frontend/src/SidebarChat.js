@@ -22,7 +22,7 @@ function SidebarChat({ id, name, addNewChat }){
   }
  
   return !addNewChat ? (
-    <Link to={`/rooms/${id}`}> 
+    <Link to={`/rooms/${id}`} style={{ textDecoration: 'none' }}> 
         <div className='sidebarChat'>
           <Avatar></Avatar>
           <div className="sidebarChat__info">
