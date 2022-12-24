@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./SidebarChat.css"
 import { Avatar  } from '@mui/material';
 import db from './firebase';
@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 
 
 function SidebarChat({ id, name, addNewChat }){
+
+  useEffect(() => {
+    if(id){}
+  })
 
   const createChat = () => {
     const roomName = prompt('please enter name for chat');

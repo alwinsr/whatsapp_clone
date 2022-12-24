@@ -5,13 +5,14 @@ import "./Login.css";
 import Img from './images/27473336.jpg';
 import { auth, provider } from './firebase';
 import { useStateValue } from './StateProvider';
-import { actionTypes } from './Reducer';
+import { actionTypes } from './reducer';
 
 function Login(){
   const [{}, dispatch] = useStateValue();
 
   const signIn = ()=>{
     auth.signInWithPopup(provider).then(result =>{
+      console.log(result);
       dispatch({
         type: actionTypes.SET_USER,
         user: result.user,

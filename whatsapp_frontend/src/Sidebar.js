@@ -12,6 +12,7 @@ import db from './firebase';
 
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
+  
 
   useEffect(() => {
     const unsuscribe = db.collection("rooms").onSnapshot((snapshot) => 
@@ -56,13 +57,7 @@ function Sidebar() {
             <SidebarChat key={room.id} id={room.id}
             name={room.data.name} />
           ))}
-
-           
-
         </div> 
-
-        
-
     </div>
   )
 }

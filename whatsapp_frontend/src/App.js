@@ -6,12 +6,14 @@ import Pusher from "pusher-js";
 import axios from "./axios.js";
 import Login from "./Login.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 
 
 function App() {
   const [messages, setMessage] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+  const [{user}, dispatch] = useStateValue();
   
 
   useEffect(function () {
@@ -60,7 +62,7 @@ function App() {
               
               <Route path="/" element= {<h1>Home</h1>} >
               </Route>
-              <Route path="/rooms/:roomId" element={[<Chat messages={messages} />]}/>
+              <Route path="/rooms/:roomId" element={[<Chat messages={messages } />]}/>
             </Routes>
           </BrowserRouter>
         </div>

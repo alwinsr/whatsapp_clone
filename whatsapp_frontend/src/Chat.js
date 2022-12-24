@@ -7,12 +7,14 @@ import MicIcon from '@mui/icons-material/Mic';
 import './Chat.css' 
 import axios from "./axios";
 import db from './firebase';
+import { useStateValue } from './StateProvider';
 
 function Chat({ messages }) {
   
   const [input, setInput] = useState("");
   const { roomId } = useParams();
   const [roomName, setRoomName] = useState("");
+  const [{user}, dispatch] = useStateValue();
 
   useEffect(() => {
     if(roomId){
@@ -26,10 +28,12 @@ function Chat({ messages }) {
 
     await axios.post('/messages/new', {
       message: input,
-      name: "SS",
+      name: user.displayName,
       timestamp: "Just now! ",
       received: false,
+      roomid: roomId,
     });
+    
     setInput('');
   };
 
@@ -56,13 +60,15 @@ function Chat({ messages }) {
 
       <div className="chat__body">
         {messages.map((message) => (
-          <p 
-            className={`chat__message ${message.received && "chat__reciever"}` }
-          >
+          <p className={`chat__message ${message.name === user.displayName && "chat__reciever"}` } >
             <span className="chat__name">{message.name}</span>
-              {message.message}
+
+            
+            {message.message}
+            
             <span className="chat__timestamp">{message.timestamp}</span>
           </p>
+           
 
         ))}
       </div>
